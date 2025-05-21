@@ -1,103 +1,173 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8" />
-    <title>Kişisel Gelişim Blogum</title>
-    <style>
-     body {
-    font-family: 'Open Sans', sans-serif;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.8;
-    background: #fff8f0;
-    color: #3e3e3e;
-}
-h1 {
-    color: #d35400;
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-nav {
-    text-align: center;
-    margin-bottom: 40px;
-}
-nav a {
-    margin: 0 15px;
-    font-weight: 600;
-    color: #e67e22;
-    text-decoration: none;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
-}
-nav a:hover {
-    border-bottom: 2px solid #e67e22;
-}
-.post {
-    background: white;
-    margin-bottom: 25px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(211, 155, 108, 0.2);
-    transition: box-shadow 0.3s ease;
-}
-.post:hover {
-    box-shadow: 0 6px 15px rgba(211, 155, 108, 0.35);
-}
-.post h2 {
-    margin-top: 0;
-    color: #d35400;
-}
-.post p {
-    margin-bottom: 8px;
-    color: #555;
-}
-.post .date {
-    font-size: 14px;
-    color: #999;
-}
-h1 {
-    color: #d35400;
-    text-align: center;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.post h2 {
-    font-size: 22px;
-    color: #e67e22;
-    margin-bottom: 10px;
-}
-
-    </style>
+  <meta charset="UTF-8" />
+  <title>Psikolojik ve Kişisel Gelişim Blogu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fffaf5;
+      color: #444;
+    }
+    header {
+      background-color: #fcefe3;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 2px solid #f4dcc9;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #d77a61;
+      letter-spacing: 1.2px;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #7a5a4e;
+    }
+    nav {
+      background-color: #fde8dc;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-weight: 600;
+    }
+    nav a {
+      color: #d77a61;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .post-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .post-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(215, 122, 97, 0.3);
+    }
+    .post-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .post-content {
+      padding: 15px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .post-title {
+      font-size: 20px;
+      color: #d77a61;
+      margin: 0 0 10px 0;
+    }
+    .post-excerpt {
+      font-size: 14px;
+      color: #7a5a4e;
+      flex-grow: 1;
+    }
+    .read-more {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #d77a61;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 14px;
+      color: #b3a18e;
+      border-top: 1px solid #f4dcc9;
+      margin-top: 60px;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Kişisel Gelişim Blogum</h1>
-<nav style="text-align:center; margin-bottom:40px;">
-  <a href="index.html" style="margin-right:15px;">Anasayfa</a>
-  <a href="hakkimda.html">Hakkımda</a>
-</nav>
+  <header>
+    <h1>Psikolojik ve Kişisel Gelişim Blogu</h1>
+    <p>Hayatın her alanında kendinizi keşfetmeye ve güçlendirmeye hazır mısınız?</p>
+  </header>
 
-    <div class="post">
-  <h2><a href="yazi1.html">Kendimi sevmeyi neden bu kadar zor buluyorum?</a></h2>
-  <p>Hepimiz zaman zaman kendimizi yeterince sevmediğimiz anlar yaşarız...</p>
-  <div class="date">Yayınlanma Tarihi: 15 Mayıs 2025</div>
-</div>
+  <nav>
+    <a href="index.html">Anasayfa</a>
+    <a href="yazi1.html">Farkındalık</a>
+    <a href="yazi2.html">Öz Sevgi</a>
+    <a href="yazi3.html">Stres Yönetimi</a>
+    <a href="yazi4.html">Kendine Şefkat</a>
+  </nav>
 
-    <div class="post">
-  <h2><a href="yazi2.html">Başkalarını mutlu etmek için yaşarken tükenmek</a></h2>
-  <p>Başkalarının beklentilerine göre yaşamak neden yorucu ve nasıl kendimizi koruruz...</p>
-  <div class="date">Yayınlanma Tarihi: 12 Mayıs 2025</div>
-</div>
-<div class="post">
-  <h2><a href="yazi3.html">Kaygı ile baş etme yolları</a></h2>
-  <p>Kaygı hayatımızda sık karşılaştığımız bir duygu. Bu yazıda kaygı ile sağlıklı baş etmenin yollarını konuşuyoruz...</p>
-  <div class="date">Yayınlanma Tarihi: 21 Mayıs 2025</div>
-<li><a href="yazi4.html">Kendine Şefkat Göstermenin Gücü</a></li>
-</div>
+  <main>
+    <article class="post-card" onclick="location.href='yazi1.html'">
+      <img class="post-image" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Farkındalık" />
+      <div class="post-content">
+        <h2 class="post-title">Farkındalık Nedir ve Neden Önemlidir?</h2>
+        <p class="post-excerpt">Farkındalık, anı yaşamak ve düşünceleri yargılamadan gözlemlemek anlamına gelir. Bu yazıda farkındalığın faydalarını ve nasıl geliştirilebileceğini öğrenin.</p>
+        <a href="yazi1.html" class="read-more">Devamını Oku →</a>
+      </div>
+    </article>
+
+    <article class="post-card" onclick="location.href='yazi2.html'">
+      <img class="post-image" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Öz Sevgi" />
+      <div class="post-content">
+        <h2 class="post-title">Öz Sevgi ve Kendine Değer Vermek</h2>
+        <p class="post-excerpt">Kendimize olan sevgi ve saygımız, yaşam kalitemizi doğrudan etkiler. Bu yazıda öz sevginin önemi ve yolları anlatılıyor.</p>
+        <a href="yazi2.html" class="read-more">Devamını Oku →</a>
+      </div>
+    </article>
+
+    <article class="post-card" onclick="location.href='yazi3.html'">
+      <img class="post-image" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80" alt="Stres Yönetimi" />
+      <div class="post-content">
+        <h2 class="post-title">Stresle Baş Etmenin Etkili Yolları</h2>
+        <p class="post-excerpt">Stres modern yaşamın bir gerçeği. Burada stresin etkileri ve günlük hayatta uygulanabilecek basit yöntemler anlatılıyor.</p>
+        <a href="yazi3.html" class="read-more">Devamını Oku →</a>
+      </div>
+    </article>
+
+    <article class="post-card" onclick="location.href='yazi4.html'">
+      <img class="post-image" src="https://images.unsplash.com/photo-1520975892445-181f99d5ba3d?auto=format&fit=crop&w=600&q=80" alt="Kendine Şefkat" />
+      <div class="post-content">
+        <h2 class="post-title">Kendine Şefkat Göstermenin Gücü</h2>
+        <p class="post-excerpt">Kendine şefkat, zor zamanlarda kendimize destek olmak demektir. Bu yazıda içsel şefkatin gücü ve etkileri anlatılıyor.</p>
+        <a href="yazi4.html" class="read-more">Devamını Oku →</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2025 Psikolojik ve Kişisel Gelişim Blogu. Tüm hakları saklıdır.
+  </footer>
 </body>
 </html>
